@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+        <h1 class="none">The  App does  not support  devices smaller than 650px.</h1>
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="./assets/images/Group 74.svg" alt="logo">
+            <nav class="menu">
+                <div class="menu__list">
+                    <!-- <button class="menu__item menu__item-active">
+                        <img src="assets/images/Dumbbell.svg" alt="">
+                    </button> -->
+                  
+                    <!-- <button class="menu__item" menu-habbit-id="1">
+                        <img src="./assets/images/Water.svg" alt=""  >
+                    </button>
+                    <button class="menu__item">
+                        <img src="./assets/images/Group.svg" alt="">
+                    </button> -->
+                </div>
+                <button class="menu__add" onclick="togglePopup()">
+                    <img src="./assets/images/Add.svg" alt="">
+                </button>
+            </nav>
+        </div>
+        <div class="content">
+            <header>
+                <h1 class="h1">-</h1>
+                <div class="progress">
+                    <div class="progress__text">
+                        <div class="progress__name">Progress</div>
+                        <div class="progress__percent">%</div>
+                    </div>
+                    <div class="progress__bar">
+                        <div class="progress__bar-cover">
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                
+                
+                <div  id="days"></div>
+                <div class="habit">
+                    <div class="habit__day">
+                        Day _
+                    </div>
+                    <form class="habit__form"  onsubmit="addDays(event)">
+                        <img class="com" src="./assets/images/Group 68.svg" alt=""><input name="comment" class="input__icon" type="text" placeholder="Comment">
+                        <button class="habit__add" type="submit">
+                            Ready
+                        </button>
+                    </form>
+                   
+                </div>
+            </main>
+        </div>
+        <div class="cover  cover_hidden" id="add-habbit-popup">
+            <div class="popup">
+                <h2>New Habit</h2>
+                <div class="icon-label">Icon</div>
+                <div class="icon-select">
+                    <button   class="icon icon_active" onclick="setIcon(this,'sport')">
+                        <img src="assets/images/sport.svg" alt="sport" >
+                    </button>
+                    <button   class="icon " onclick="setIcon(this,'water')">
+                        <img src="assets/images/Water.svg" alt="water">
+                    </button>
+                    <button   class="icon" onclick="setIcon(this,'food')">
+                        <img src="assets/images/food.svg" alt="food" >
+                    </button>
+                   
+                </div>
+                <form action="" class="popup__form" onsubmit="addHabbit(event)">
+                    <input class="input__icon" type="text" name="name" placeholder="Naming">
+                    <input class="input__icon" type="text" name="icon" hidden placeholder="Icon"  value="sport">
+                    <input class="input__icon" type="number" name="target" placeholder="Target">
+                    <button class="habit__add"  type="submit">Add</button>
+                </form>
+                <button class="popup__close" onclick="togglePopup()">
+                    <img src="./assets/images/cross.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
